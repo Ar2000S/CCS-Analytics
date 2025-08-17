@@ -23,7 +23,7 @@ app.add_middleware(
 # Import the analytics function from the insights.py file
 from insights import CO2_emssion_pattern
 
-app = FastAPI(title="CSV Update Service")
+app = FastAPI(title="Live CO2 analytics sercvice")
 
 #Initialize the csv as nothing___________
 data = pd.DataFrame()
@@ -44,6 +44,7 @@ class GlobalInput(BaseModel):
     co2_stored_tonnes: float | None = None
     capture_efficiency_percent: float | None = None
     storage_integrity_percent: float | None = None
+    #Might add the anomaly_flag field for the csv here later
 #___________________________
 
 
